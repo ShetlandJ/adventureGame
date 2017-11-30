@@ -1,5 +1,5 @@
 var assert = require("assert");
-var Hero = require("../task.js");
+var Task = require("../task.js");
 
 describe( "Task", function(){
   beforeEach(function(){
