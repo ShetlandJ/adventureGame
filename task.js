@@ -15,4 +15,4 @@ Task.prototype = {
   }
 };
 
-module.export = Task;
+module.exports = Task;
