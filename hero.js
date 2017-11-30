@@ -11,7 +11,7 @@ var Hero = function(name, favFood){
 Hero.prototype = {
 
   loseHealth: function(number){
-    if (this.health - number > 0)
+    if (this.health - number > 0){
     this.health -= number;
   }else{
     this.health = 0;
