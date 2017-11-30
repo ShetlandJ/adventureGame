@@ -12,7 +12,7 @@ describe( "Rat", function(){
   });
 
   it("can poison food", function(){
-    rat1.touchFood;
+    rat1.touchFood(food1);
     assert.strictEqual(food1.poison, true);
   });
 });
