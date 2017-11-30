@@ -1,10 +1,12 @@
 var assert = require("assert");
 var Hero = require("../hero.js");
+var Task = require("../task.js")
 
 describe( "Hero", function(){
   beforeEach(function(){
 
-    hero1 = new Task("Superman", "Chicken")
+    hero1 = new Task("Superman", "Chicken");
+    task1 = new Task("Do stuff", 10, 5, 100);
   });
 
   it("should have a name", function(){
@@ -31,8 +33,13 @@ describe( "Hero", function(){
     assert.strictEqual(hero1.health, 85);
   });
 
-  it("quests start as zero", function(){
+  it("tasks start as zero", function(){
     assert.strictEqual(hero1.tasks.length, 0);
+  });
+
+  it("tasks can be added", function(){
+    hero1.addTask(task1)
+    assert.strictEqual(hero1.tasks.length, 1);
   });
 
   it("can talk", function(){
