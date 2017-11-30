@@ -1,3 +1,5 @@
+var assert = require("assert");
+var Food = require("../food.js")
 var Rat = require("../rat.js");
 
 describe( "Rat", function(){

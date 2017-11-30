@@ -1,4 +1,4 @@
-var _ = require("lodash";)
+var _ = require("lodash");
 
 var Food = function(name, replenish){
   this.name = name;
