@@ -1,0 +1,22 @@
+{
+  "name": "adventure_game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShetlandJ/adventureGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShetlandJ/adventureGame/issues"
+  },
+  "homepage": "https://github.com/ShetlandJ/adventureGame#readme",
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
+}
