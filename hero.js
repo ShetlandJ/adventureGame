@@ -12,10 +12,10 @@ Hero.prototype = {
 
   loseHealth: function(number){
     if (this.health - number > 0){
-    this.health -= number;
-  }else{
-    this.health = 0;
-  }
+      this.health -= number;
+    }else{
+      this.health = 0;
+    }
   },
 
   talk: function(){
@@ -28,15 +28,32 @@ Hero.prototype = {
 
   eatFood: function(food){
     if(food.poison === false){
-      if (food.name === this.favFood){
-        this.health += 1.5 * food.replenish;
-      };
-      this.health += food.replenish;
-    }else{
-      this.health -= food.replenish;
+
+      if ((this.health + food.replenish) >= 100) {
+        this.health = 100;
+
+      } else {
+
+        if (food.name === this.favFood){
+
+          if ((this.health + (1.5 * food.replenish)) >= 100) {
+            this.health = 100;
+
+          } else {
+            this.health += (1.5 * food.replenish);
+          }
+        } else {
+          this.health += food.replenish;
+        }
+      }
+    } else {
+      if ((this.health - food.replenish) <= 0) {
+        this.health = 0;
+      } else {
+        this.health -= food.replenish;
+      }
     }
   }
 };
-
 
 module.exports = Hero;
