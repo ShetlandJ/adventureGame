@@ -15,6 +15,7 @@ Hero.prototype = {
     this.health -= number;
   }else{
     this.health = 0;
+  }
   },
 
   talk: function(){
