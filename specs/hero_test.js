@@ -102,25 +102,25 @@ describe( "Hero", function(){
     hero1.addTask(task3)
 
 
-    assert.strictEqual(hero1.sortTask("difficulty"), 1);
+    assert.deepStrictEqual(hero1.sortTask("difficulty"), [task3, task1, task2]);
   });
 
-  xit("can sort by urgency", function(){
+  it("can sort by urgency", function(){
     hero1.addTask(task1)
     hero1.addTask(task2)
     hero1.addTask(task3)
 
 
-    assert.strictEqual(hero1.sortTask("urgency"), 1);
+    assert.deepStrictEqual(hero1.sortTask("urgency"), [task1, task2, task3]);
   });
 
-  xit("can sort by reward", function(){
+  it("can sort by reward", function(){
     hero1.addTask(task1)
     hero1.addTask(task2)
     hero1.addTask(task3)
 
 
-    assert.strictEqual(hero1.sortTask("reward"), 1);
+    assert.deepStrictEqual(hero1.sortTask("reward"), [task3, task1, task2]);
   });
 
 })

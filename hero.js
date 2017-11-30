@@ -64,18 +64,9 @@ Hero.prototype = {
   },
 
   sortTask: function(attribute){
-    if (attribute === "difficulty"){
-      return _.sortBy(this.tasks, ["difficulty"])
-    }else{
-      if (attribute === "urgency"){
-        return _.sortBy(this.tasks, ["urgency"])
-      } else {
-        if (attribute === "reward"){
-          return _sortBy(this.tasks, ["reward"])
-        }
-      }
 
-      }
+      return _.sortBy(this.tasks, [attribute]).reverse();
+
     }
 
 
