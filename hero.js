@@ -15,11 +15,11 @@ Hero.prototype = {
     this.health -= number;
   }else{
     this.health = 0;
-  }
+  },
 
   talk: function(){
     return "I'm not a bird or a plane dumbass!";
-  }
+  },
 
   addTask: function(task){
     this.tasks.push(task);
