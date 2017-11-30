@@ -11,8 +11,8 @@ var Task = function(description, difficulty, urgency, reward){
 Task.prototype = {
 
   setComplete: function(){
-    this.complete + true;
+    this.complete = true;
   }
 };
 
-module.export = Tasks;
+module.export = Task;
