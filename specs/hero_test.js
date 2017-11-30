@@ -13,6 +13,9 @@ describe( "Hero", function(){
 
 
     task1 = new Task("Do stuff", 10, 5, 100);
+    task2 = new Task("Do other stuff", 5, 2, 50);
+    task3 = new Task("Do even more stuff", 15, 1, 150);
+
     food1 = new Food("Chicken", 50);
 
   });
@@ -69,6 +72,28 @@ describe( "Hero", function(){
 
   it("can talk", function(){
     assert.strictEqual(hero1.talk(), "I'm not a bird or a plane dumbass!");
+  });
+
+  it("can check completed tasks", function(){
+    hero1.addTask(task1)
+    hero1.addTask(task2)
+    hero1.addTask(task3)
+
+    task2.setComplete();
+    task3.setComplete();
+
+    assert.strictEqual(hero1.viewTask("complete"), 2);
+  });
+
+  it("can check incompleted tasks", function(){
+    hero1.addTask(task1)
+    hero1.addTask(task2)
+    hero1.addTask(task3)
+
+    task2.setComplete();
+    task3.setComplete();
+
+    assert.strictEqual(hero1.viewTask("incomplete"), 1);
   });
 
 })

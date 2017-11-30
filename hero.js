@@ -53,7 +53,18 @@ Hero.prototype = {
         this.health -= food.replenish;
       }
     }
+  },
+
+  viewTask: function(status){
+    if (status === "complete") {
+       return _.filter(this.tasks, { complete: true }).length;
+    } else {
+       return _.filter(this.tasks, { complete: false }).length;
+    }
   }
+  // findAccountByName: function(name){
+	// 	return _.find(this.accounts, { name: name });
+	// },
 };
 
 module.exports = Hero;
