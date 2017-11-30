@@ -24,6 +24,17 @@ Hero.prototype = {
 
   addTask: function(task){
     this.tasks.push(task);
+  },
+
+  eatFood: function(food){
+    if(food.poison === false){
+      if (food.name === this.favFood){
+        this.health += 1.5 * food.replenish;
+      };
+      this.health += food.replenish;
+    }else{
+      this.health -= food.replenish;
+    }
   }
 };
 
