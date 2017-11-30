@@ -1,7 +1,6 @@
 {
   "name": "adventure_game",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "mocha specs"
@@ -19,7 +18,6 @@
   "devDependencies": {
     "mocha": "^4.0.1"
   },
-  "dependencies": {
-    "lodash": "^4.17.4"
-  }
+
+  "description": ""
 }
