@@ -4,7 +4,7 @@ var Hero = require("../hero.js");
 describe( "Hero", function(){
   beforeEach(function(){
 
-    hero1 = new Park("Superman", "Chicken")
+    hero1 = new Task("Superman", "Chicken")
   });
 
   it("should have a name", function(){
@@ -35,7 +35,8 @@ describe( "Hero", function(){
     assert.strictEqual(hero1.tasks.length, 0);
   });
 
-  it("quests start as zero", function(){
-    assert.strictEqual(hero1.tasks.length, 0);
+  it("can talk", function(){
+    assert.strictEqual(hero1.talk, "I'm not a bird or a plane dumbass!");
   });
+
 )};
