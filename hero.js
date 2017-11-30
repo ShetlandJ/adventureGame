@@ -61,10 +61,25 @@ Hero.prototype = {
     } else {
        return _.filter(this.tasks, { complete: false }).length;
     }
-  }
-  // findAccountByName: function(name){
-	// 	return _.find(this.accounts, { name: name });
-	// },
+  },
+
+  sortTask: function(attribute){
+    if (attribute === "difficulty"){
+      return _.sortBy(this.tasks, ["difficulty"])
+    }else{
+      if (attribute === "urgency"){
+        return _.sortBy(this.tasks, ["urgency"])
+      } else {
+        if (attribute === "reward"){
+          return _sortBy(this.tasks, ["reward"])
+        }
+      }
+
+      }
+    }
+
+
+
 };
 
 module.exports = Hero;

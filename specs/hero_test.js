@@ -96,4 +96,31 @@ describe( "Hero", function(){
     assert.strictEqual(hero1.viewTask("incomplete"), 1);
   });
 
+  it("can sort by difficulty", function(){
+    hero1.addTask(task1)
+    hero1.addTask(task2)
+    hero1.addTask(task3)
+
+
+    assert.strictEqual(hero1.sortTask("difficulty"), 1);
+  });
+
+  xit("can sort by urgency", function(){
+    hero1.addTask(task1)
+    hero1.addTask(task2)
+    hero1.addTask(task3)
+
+
+    assert.strictEqual(hero1.sortTask("urgency"), 1);
+  });
+
+  xit("can sort by reward", function(){
+    hero1.addTask(task1)
+    hero1.addTask(task2)
+    hero1.addTask(task3)
+
+
+    assert.strictEqual(hero1.sortTask("reward"), 1);
+  });
+
 })
