@@ -21,7 +21,9 @@ Hero.prototype = {
     return "I'm not a bird or a plane dumbass!";
   }
 
-
+  addTask: function(task){
+    this.tasks.push(task);
+  }
 };
 
 
